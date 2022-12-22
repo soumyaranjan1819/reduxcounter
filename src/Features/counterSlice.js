@@ -8,7 +8,11 @@ export const counterSlice= createSlice({
     initialState,
     reducers:{
         increment:(state)=>{
+            if(state.count<10){
             state.count +=1;
+            }
+            else
+            alert('Reached maximum limit')
         },
         decrement:(state)=>{
             state.count -=1;
